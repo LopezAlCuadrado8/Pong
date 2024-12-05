@@ -1,0 +1,334 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfdxtfgsh0hhv"]
+
+[ext_resource type="PackedScene" uid="uid://35mnioqnm74y" path="res://Scenes/player.tscn" id="1_rcd5f"]
+[ext_resource type="PackedScene" uid="uid://ddp0k77fo4oy3" path="res://Scenes/borders.tscn" id="2_whpqh"]
+[ext_resource type="PackedScene" uid="uid://gafmojtcd0a2" path="res://Scenes/ball.tscn" id="3_hslhr"]
+[ext_resource type="Texture2D" uid="uid://drgcour7g4g1m" path="res://Asset/Sprites/background.png" id="4_undbq"]
+[ext_resource type="PackedScene" uid="uid://c028rrrryeww1" path="res://Scenes/CPU.tscn" id="5_5wh8j"]
+[ext_resource type="Texture2D" uid="uid://buro03ihrqsxf" path="res://Asset/Sprites/net.png" id="5_j17b7"]
+[ext_resource type="PackedScene" uid="uid://doq050pw8i2je" path="res://Scenes/death_border.tscn" id="7_77wfm"]
+[ext_resource type="FontFile" uid="uid://x0k434wg2vsy" path="res://Asset/fonts/PixelOperator8.ttf" id="8_6ifxh"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="9_40w7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct7m8"]
+size = Vector2(6, 156)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yc0db"]
+line_spacing = 5.0
+font = ExtResource("8_6ifxh")
+font_color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[node name="Game" type="Node2D"]
+
+[node name="brackground" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(288, 168.03)
+texture = ExtResource("4_undbq")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/background.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "ba358a3502a051b15e8dbb1b5789713a"
+
+[node name="Net" type="Node" parent="."]
+
+[node name="Net" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, -69)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "eb068f9619ec689ec2f0d6055de8f2a6"
+
+[node name="Net2" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, -55)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net3" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, -40)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net4" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, -25)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net5" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, -10)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net6" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, 5)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net7" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, 20)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net8" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, 35)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net9" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, 51)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Net10" type="Sprite2D" parent="Net"]
+texture_filter = 1
+position = Vector2(0, 67)
+scale = Vector2(2, 10)
+texture = ExtResource("5_j17b7")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset/Sprites",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/Sprites/net.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6a9a3cef0f143291ecf0c641ed1d226"
+
+[node name="Area2D" type="Area2D" parent="Net"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Net/Area2D"]
+shape = SubResource("RectangleShape2D_ct7m8")
+
+[node name="Borders" type="Node" parent="."]
+
+[node name="Border" parent="Borders" instance=ExtResource("2_whpqh")]
+position = Vector2(0, 80)
+
+[node name="Border2" parent="Borders" instance=ExtResource("2_whpqh")]
+position = Vector2(0, -80)
+rotation = 3.14159
+
+[node name="player" parent="." instance=ExtResource("1_rcd5f")]
+position = Vector2(-131, 0)
+motion_mode = 1
+
+[node name="CPU" parent="." instance=ExtResource("5_5wh8j")]
+position = Vector2(131, 0)
+scale = Vector2(0.479999, 0.64)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="ball" parent="." instance=ExtResource("3_hslhr")]
+unique_name_in_owner = true
+position = Vector2(105, -16)
+scale = Vector2(0.2, 0.2)
+
+[node name="Death_borders" type="Node2D" parent="."]
+
+[node name="death_border_right" parent="Death_borders" instance=ExtResource("7_77wfm")]
+position = Vector2(-149, 0)
+
+[node name="death_border_left" parent="Death_borders" instance=ExtResource("7_77wfm")]
+position = Vector2(150, 1)
+rotation = 3.14159
+
+[node name="Left_score" type="Label" parent="."]
+offset_left = -36.0
+offset_top = -66.0
+offset_right = 4.0
+offset_bottom = -43.0
+text = "0"
+label_settings = SubResource("LabelSettings_yc0db")
+
+[node name="Right_score" type="Label" parent="."]
+offset_left = 11.0
+offset_top = -66.0
+offset_right = 51.0
+offset_bottom = -43.0
+text = "0"
+label_settings = SubResource("LabelSettings_yc0db")
+
+[node name="GameManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_40w7y")

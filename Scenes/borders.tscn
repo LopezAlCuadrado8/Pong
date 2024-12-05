@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddp0k77fo4oy3"]
+
+[ext_resource type="Texture2D" uid="uid://du84lgngcabod" path="res://Asset/Sprites/border.png" id="1_a0b5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck60e"]
+size = Vector2(288, 15.304)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(1, 0.4)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+scale = Vector2(1.00223, -0.588082)
+shape = SubResource("RectangleShape2D_ck60e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_a0b5d")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/border.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "28f00535a2b57251adb936841168a6f4"

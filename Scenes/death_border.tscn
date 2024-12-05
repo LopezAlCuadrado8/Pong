@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://doq050pw8i2je"]
+
+[ext_resource type="Script" path="res://Scripts/death_border.gd" id="1_tbgdc"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i1amn"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_tbgdc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_i1amn")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

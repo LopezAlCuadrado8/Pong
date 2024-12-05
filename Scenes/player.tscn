@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://35mnioqnm74y"]
+
+[ext_resource type="Texture2D" uid="uid://bv20dccphlx13" path="res://Asset/Sprites/pong_player.png" id="1_cfwnw"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_wwvc6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuion"]
+size = Vector2(46.8749, 2.08334)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.479999, 0.64)
+script = ExtResource("1_wwvc6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_cfwnw")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://Asset",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://Asset/pong_player.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "454277f306675d001924d2902ea783f9"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.20834, 6.99943e-06)
+rotation = 1.5708
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_kuion")
+one_way_collision = true
+one_way_collision_margin = 20.0
