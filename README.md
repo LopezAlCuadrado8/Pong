@@ -1,3 +1,3 @@
 # Pong
-Hecho con Godot Engine como parte del desafio
-https://20_games_challenge.gitlab.io/challenge/
+Hecho con Godot Engine como parte del desafio\
+[Desafio 20 juegos](https://20_games_challenge.gitlab.io/challenge/)
